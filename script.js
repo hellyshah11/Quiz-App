@@ -36,3 +36,35 @@ const quizData=[
         correct:'d'
     },
 ]
+
+let question=document.getElementById('question');
+let a_text=document.getElementById('a_text');
+let b_text=document.getElementById('b_text');
+let c_text=document.getElementById('c_text');
+let d_text=document.getElementById('d_text');
+let submitBtn=document.getElementById('submit');
+
+let currentQuiz=0;
+loadQuiz();
+
+function loadQuiz(){
+    let currentQuizData=quizData[currentQuiz];
+    question.innerText=currentQuizData.question;
+    a_text.innerText=currentQuizData.a;
+    b_text.innerText=currentQuizData.b;
+    c_text.innerText=currentQuizData.c;
+    d_text.innerText=currentQuizData.d;
+   
+}
+
+submitBtn.addEventListener("click",()=>{
+    currentQuiz++;
+    
+    if(currentQuiz<quizData.length){
+        loadQuiz();
+    }
+    else{
+        alert("You finished the Quiz");
+    }
+});
+ 
