@@ -27,6 +27,11 @@ body{
 h2{
     margin:0;
 }
+h3{
+    margin: 1rem;
+    text-align: center;
+    font-size: 25px;
+}
 ul{
     list-style-type: none;
     padding:0;
@@ -34,6 +39,9 @@ ul{
 ul li{
     font-size: 1.1rem;
     margin:1rem 0;
+}
+ul li label{
+    cursor: pointer;
 }
 button{
     background-color: #8e44ad;
